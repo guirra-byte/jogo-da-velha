@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,700;0,800;0,900;1,100;1,400;1,600&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+:root{
+  --one-color:#000;
+  --other-color:#fca311;
+  --last-color:#3a86ff;
+  --new-color:#ff006e;
+  --place-color:#ffbe0b;
+  --green-color:#00ff95;
+  --help-color: #6e64ff;
+}
+body{
+  background: var(--help-color);
+}
+
+h1{
+  color: white;
+  font-size: 50px;
+  text-align: center;
+}
+span{
+  color: var(--green-color);
+  font-style: italic;
+  font-weight: 200;
+}
+
+.square{
+  height: 13rem;
+  width: 13rem;
+  background: white;
+  border-radius: .5rem;
+  box-shadow: 10px 10px 1px var(--new-color);
+  margin-right: 1rem;
+  margin-top: 1rem;
+  transition: all .5s;
+  cursor: pointer;
+  top: 0;
+}
+
+.square:hover{
+  background: var(--other-color);
+}
+
+.firstLine{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  margin-left: 33rem;
+}
+.secondLine{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  margin-top: 15rem;
+  margin-left: 33rem;
+}
+
+.otherLine{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  margin-top: 30rem;
+  position: absolute;
+  margin-left: 33rem;
+}
+
+.o{
+  position: relative;
+}
+
+.o::after{
+  content: "\1f6e1";
+  font-size: 150px;
+  position: absolute;
+  line-height: 200px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  height: 0;
+  margin-left: 2rem;
+}
+
+.x{
+  position: relative;
+}
+.x::after{
+  content: "\2694";
+  position: absolute;
+  font-size: 150px;
+  line-height: 200px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin-left: 3rem;
+}
+
+.resultDiv{
+  height: 5rem;
+  width: 20rem;
+  background: var(--one-color);
+  border-radius: .5rem;
+  margin-left: 1rem;
+  position: absolute;
+}
+
+.resultParagraf{
+  color: white;
+  padding: 10px;
+}
+
+h2{
+  color: var(--green-color);
+  padding-left: 1rem;
+  font-size: 30px;
+  font-weight: 200;
+}
+
+.pointsResult{
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  background: var(--one-color);
+  margin-top: 7rem;
+  width: 20rem;
+  height: 10rem;
+  border-radius: .5rem;
+  margin-left: 1rem;
+  color: white;
+  text-align: center;
+}
+
+.oPlayerPoints{
+  background: var(--place-color);
+  color: white;
+  bottom: 0;
+  height: 50px;
+  width: 19rem;
+  border-radius: .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1rem;
+  margin-top: 7rem;
+}
+.xPlayerPoints{
+  color: white;
+  background: var(--new-color);
+  height: 50px;
+  width: 19rem;
+  border-radius: .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1rem;
+  margin-top: 10rem;
+}
+
+.definedResultx{
+  position: absolute;
+  background: var(--one-color);
+  width: 10rem;
+  height: 3rem;
+  margin-left: 5rem;
+  border-radius: .5rem;
+  margin-top: .5rem;
+  color: white;
+  text-align: center;
+  font-size: 30px;
+}
+
+.definedResulto{
+  position: absolute;
+  background: var(--one-color);
+  width: 10rem;
+  height: 3rem;
+  margin-left: 5rem;
+  border-radius: .5rem;
+  margin-top: .5rem;
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  
+}
+
+.saveResultButton{
+  outline: none;
+  padding: 5px;
+  background: #00ff95;
+  color: black;
+  font-weight: 500;
+  border: none;
+  border-radius: 2px;
+  font-size: 15px;
+  transition: all .4s;
+  cursor: pointer;
+}
+
+.saveResultButton:hover{
+  background: #fca311;
+}
+
+#gameOver{
+  background: black;
+  height: 100vh;
+  width: 211vh;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  opacity: 80%;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.info{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  opacity: 100%;
+}
+
+.info h1{
+  font-weight: 800;
+  font-size: 100px;
+  color: #ff006e;
+  align-items: center;
+  justify-content: center;
+}
+
+.info button{
+
+  border: none;
+  background: #ffbe0b;
+  font-weight: 500;
+  font-size: 20px;
+  color: black;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all .4s;
+}
+
+.info button:hover{
+  background: #6e64ff;
+  color: white;
+}
+
+.changeDisplay{
+  display: fixed;
+}
+
+.info p{
+  font-weight: 500;
+  font-size: 50px;
+  color: #00ff88;
+  align-items: center;
+  justify-content: center;
+}
